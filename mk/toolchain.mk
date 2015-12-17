@@ -1,6 +1,7 @@
 GCC_DIR =  ~/ti/gcc
 SUPPORT_FILE_DIRECTORY = $(GCC_DIR)/include/
 CC             = $(GCC_DIR)/bin/msp430-elf-gcc
+CXX            = $(GCC_DIR)/bin/msp430-elf-g++
 OBJCOPY        = $(GCC_DIR)/bin/msp430-elf-objcopy
 GDB            = $(GCC_DIR)/bin/msp430-elf-gdb
 GDB_SERVER     = $(GCC_DIR)/bin/gdb_agent_console

@@ -14,13 +14,15 @@ SRCDIR += \
 
 SRC += \
     $(wildcard $(addsuffix /*.c,$(SRCDIR))) \
+    $(wildcard $(addsuffix /*.cpp,$(SRCDIR))) \
     $(wildcard $(addsuffix /*.s,$(SRCDIR))) \
 
 INCLUDES = $(addprefix -I,$(INCLUDE_DIR))
-OBJS := $(addprefix $(OUTDIR)/,$(patsubst %.S, %.o, $(patsubst %.s, %.o, $(patsubst %.c, %.o, $(SRC)))))
+OBJS := $(addprefix $(OUTDIR)/,$(patsubst %.S, %.o, $(patsubst %.s, %.o, $(patsubst %.c, %.o, $(patsubst %.cpp, %.o, $(SRC))))))
 DEPENDS = $(addsuffix .d,$(OBJS))
 
 CFLAGS = -I $(SUPPORT_FILE_DIRECTORY) $(INCLUDES) -mmcu=$(DEVICE) -O2 -g
+CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti
 LFLAGS = -L $(SUPPORT_FILE_DIRECTORY) -T $(DEVICE).ld
 
 all: $(FIRMWARE)
@@ -29,6 +31,11 @@ $(OUTDIR)/%.o: %.s
 	@mkdir -p $(dir $@)
 	@echo " CC      "$@
 	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(OUTDIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
+	@echo " CXX      "$@
+	@$(CXX) $(CXXFLAGS) -MMD -MF $@.d -c $< -o $@
 
 $(OUTDIR)/%.o: %.c
 	@mkdir -p $(dir $@)
@@ -52,7 +59,7 @@ flash:
 	LD_LIBRARY_PATH=$(FLASH_LIBDIR) $(FLASH) -r [Firmware Output.txt,MAIN]
 
 clean:
-	rm -rf $(OBJS) $(FIRMWARE) $(ELFOUT)
+	rm -rf $(OBJS) $(FIRMWARE) $(ELFOUT) $(DEPENDS)
 
 .PHONY: all clean flash debug
 
