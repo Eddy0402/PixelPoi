@@ -1,13 +1,9 @@
-MSP430 code template
+Pixel Poi on MSP430
 ====================
 
-# Select project type
+# Hackpad
 
-Checkout following tags in git:
-
-+ asm
-+ freertos
-+ baremetal\_c
+https://hackpad.com/LED-pixel-poi-ISIWljEvT5V
 
 # Dependencies
 
@@ -16,20 +12,17 @@ Checkout following tags in git:
 
 # Configure
 
-Modify the variable (GCC\_DIR, FLASH\_LIBDIR) in mk/toolchain.mk to path of above dependencies
+Modify the variable (GCC\_DIR, FLASH\_LIBDIR) in mk/toolchain.mk to path of
+above dependencies
 
 # Buildsystem
 
 Make targets:
 
 + all:
-  - all source files under SRC folder defined in Makefile and FreeRTOS is
-  compiled, linked and converted to firmware format. Header file dependencies
-  is handled automatically.
-
+  - all source files is compiled, linked and converted to firmware format.
+  Header file dependencies is handled automatically.
 + debug
   - Starts GDB server and GDB, check tools/gdbscript for initialize script.
-
 + flash
-
 + clean
