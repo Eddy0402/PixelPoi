@@ -21,7 +21,7 @@ INCLUDES = $(addprefix -I,$(INCLUDE_DIR))
 OBJS := $(addprefix $(OUTDIR)/,$(patsubst %.S, %.o, $(patsubst %.s, %.o, $(patsubst %.c, %.o, $(patsubst %.cpp, %.o, $(SRC))))))
 DEPENDS = $(addsuffix .d,$(OBJS))
 
-CFLAGS = -I $(SUPPORT_FILE_DIRECTORY) $(INCLUDES) -mmcu=$(DEVICE) -O2 -g
+CFLAGS = -I $(SUPPORT_FILE_DIRECTORY) $(INCLUDES) -mmcu=$(DEVICE) -O2 -g -std=c11
 CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti -std=c++11
 LFLAGS = -L $(SUPPORT_FILE_DIRECTORY) -T $(DEVICE).ld
 

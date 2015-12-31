@@ -1,7 +1,8 @@
 DRIVERLIB_DIR = driverlib-MSP430F5xx_6xx
 
 INCLUDE_DIR += \
-		  $(DRIVERLIB_DIR)/inc\
+		  $(DRIVERLIB_DIR)/inc \
+		  $(DRIVERLIB_DIR) \
 
 SRCDIR += \
 		  $(DRIVERLIB_DIR) \
