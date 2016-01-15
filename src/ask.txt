@@ -1,2 +1,0 @@
-spi 1 byte needs 8 ???? cycles
-dma 1 byte needs 2 MCLK cycles
