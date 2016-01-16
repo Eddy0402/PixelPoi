@@ -25,7 +25,8 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-int test(void);
+//int a(void);
+int b(void);
 
 static void __attribute__((naked, section(".crt_0042"), used))
 disable_watchdog(void)
@@ -47,7 +48,7 @@ void LEDTask(void *args)
 
 int main(void)
 {
-	test();
+	b();
 
     //WDTCTL = WDTPW | WDTHOLD;  // Stop watchdog timer // See function above
     P1DIR |= 0x01;             // Set P1.0 to output direction

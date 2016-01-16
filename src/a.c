@@ -3,7 +3,7 @@
 char TxString[10] = {0};
 char RxString[10] = {0};
 
-int test(void) {
+int a(void) {
     // Stop WDT_A
     WDT_A_hold(WDT_A_BASE);
 
@@ -138,7 +138,7 @@ int test(void) {
 
     return 0;
 }
-
+/*
 __attribute__((__interrupt__(TIMER0_A1_VECTOR)))
 void TA0CCR_TA0IFG_ISR(void) {
     switch (__even_in_range(TA0IV, 0x0E)) {
@@ -194,3 +194,4 @@ void DMA_ISR(void) {
             break;
     }
 }
+*/
