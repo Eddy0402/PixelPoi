@@ -18,20 +18,17 @@
 //  Built with Code Composer Studio v5
 //***************************************************************************************
 
-#include <msp430.h>
-
 #include <stdlib.h>
-
-int test(void);
-
-static void __attribute__((naked, section(".crt_0042"), used))
-disable_watchdog(void)
-{
-    __asm__("MOV.W	#23168, &0x015C");
-}
+#include "driverlib.h"
+#include "led.hpp"
 
 int main(void)
 {
-    test();
-    while(1);
+    // Stop WDT_A
+    WDT_A_hold(WDT_A_BASE);
+
+    LedController::init();
+    LedController::appSetup();
+
+    __bis_SR_register(LPM0_bits + GIE);
 }
