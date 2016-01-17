@@ -58,9 +58,10 @@ void nrf24l01pPowerDown(void) {
 
     nrf24l01pSetHighOnCSN();
 
+    // Power down
     config &= ~PWR_UP;
 
-    // WRITE CONFIG
+    // Write CONFIG
     nrf24l01pSetLowOnCSN();
 
     USCI_B_SPI_transmitData(USCI_B0_BASE, W_REGISTER(CONFIG));
@@ -86,9 +87,10 @@ void nrf24l01pPowerUp(void) {
 
     nrf24l01pSetHighOnCSN();
 
+    // Power up
     config |= PWR_UP;
 
-    // WRITE CONFIG
+    // Write CONFIG
     nrf24l01pSetLowOnCSN();
 
     USCI_B_SPI_transmitData(USCI_B0_BASE, W_REGISTER(CONFIG));
