@@ -44,63 +44,74 @@ void nrf24l01pSetHighOnCSN(void) {
     GPIO_setOutputHighOnPin(portCSN, pinCSN);
 }
 
-void nrf24l01pPowerDown(void) {
-    // Read CONFIG
+uint8_t nrf24l01pReadRegister(uint8_t reg) {
     nrf24l01pSetLowOnCSN();
 
-    USCI_B_SPI_transmitData(USCI_B0_BASE, R_REGISTER(CONFIG));
+    USCI_B_SPI_transmitData(USCI_B0_BASE, R_REGISTER(reg));
     while (!USCI_B_SPI_getInterruptStatus(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT));
     USCI_B_SPI_clearInterrupt(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT);
 
     USCI_B_SPI_transmitData(USCI_B0_BASE, 0);
     while (!USCI_B_SPI_getInterruptStatus(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT));
-    uint8_t config = USCI_B_SPI_receiveData(USCI_B0_BASE);
+    uint8_t bits = USCI_B_SPI_receiveData(USCI_B0_BASE);
 
     nrf24l01pSetHighOnCSN();
+
+	return bits;
+}
+void nrf24l01pWriteRegister(uint8_t reg, uint8_t bits) {
+    nrf24l01pSetLowOnCSN();
+
+    USCI_B_SPI_transmitData(USCI_B0_BASE, W_REGISTER(reg));
+    while (!USCI_B_SPI_getInterruptStatus(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT));
+    USCI_B_SPI_clearInterrupt(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT);
+
+    USCI_B_SPI_transmitData(USCI_B0_BASE, bits);
+    while (!USCI_B_SPI_getInterruptStatus(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT));
+
+    nrf24l01pSetHighOnCSN();
+}
+
+void nrf24l01pPowerDown(void) {
+	// Read CONFIG
+	uint8_t config = nrf24l01pReadRegister(CONFIG);
 
     // Power down
     config &= ~PWR_UP;
 
     // Write CONFIG
-    nrf24l01pSetLowOnCSN();
-
-    USCI_B_SPI_transmitData(USCI_B0_BASE, W_REGISTER(CONFIG));
-    while (!USCI_B_SPI_getInterruptStatus(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT));
-    USCI_B_SPI_clearInterrupt(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT);
-
-    USCI_B_SPI_transmitData(USCI_B0_BASE, config);
-    while (!USCI_B_SPI_getInterruptStatus(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT));
-
-    nrf24l01pSetHighOnCSN();
+	nrf24l01pWriteRegister(CONFIG, config);
 }
 void nrf24l01pPowerUp(void) {
-    // Read CONFIG
-    nrf24l01pSetLowOnCSN();
-
-    USCI_B_SPI_transmitData(USCI_B0_BASE, R_REGISTER(CONFIG));
-    while (!USCI_B_SPI_getInterruptStatus(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT));
-    USCI_B_SPI_clearInterrupt(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT);
-
-    USCI_B_SPI_transmitData(USCI_B0_BASE, 0);
-    while (!USCI_B_SPI_getInterruptStatus(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT));
-    uint8_t config = USCI_B_SPI_receiveData(USCI_B0_BASE);
-
-    nrf24l01pSetHighOnCSN();
+	// Read CONFIG
+	uint8_t config = nrf24l01pReadRegister(CONFIG);
 
     // Power up
     config |= PWR_UP;
 
     // Write CONFIG
-    nrf24l01pSetLowOnCSN();
+	nrf24l01pWriteRegister(CONFIG, config);
+}
 
-    USCI_B_SPI_transmitData(USCI_B0_BASE, W_REGISTER(CONFIG));
-    while (!USCI_B_SPI_getInterruptStatus(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT));
-    USCI_B_SPI_clearInterrupt(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT);
+void nrf24l01pSetRX(void) {
+	// Read CONFIG
+	uint8_t config = nrf24l01pReadRegister(CONFIG);
 
-    USCI_B_SPI_transmitData(USCI_B0_BASE, config);
-    while (!USCI_B_SPI_getInterruptStatus(USCI_B0_BASE, USCI_B_SPI_RECEIVE_INTERRUPT));
+    // RX
+    config |= PRIM_RX;
 
-    nrf24l01pSetHighOnCSN();
+    // Write CONFIG
+	nrf24l01pWriteRegister(CONFIG, config);
+}
+void nrf24l01pSetTX(void) {
+	// Read CONFIG
+	uint8_t config = nrf24l01pReadRegister(CONFIG);
+
+    // TX
+    config &= ~PRIM_RX;
+
+    // Write CONFIG
+	nrf24l01pWriteRegister(CONFIG, config);
 }
 /*
 __attribute__((__interrupt__(USCI_B0_VECTOR)))

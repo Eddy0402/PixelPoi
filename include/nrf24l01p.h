@@ -62,7 +62,13 @@ void nrf24l01pSetAsCSN(uint8_t port, uint16_t pin);
 void nrf24l01pSetLowOnCSN(void);
 void nrf24l01pSetHighOnCSN(void);
 
+uint8_t nrf24l01pReadRegister(uint8_t reg);
+void nrf24l01pWriteRegister(uint8_t reg, uint8_t bits);
+
 void nrf24l01pPowerDown(void);
 void nrf24l01pPowerUp(void);
+
+void nrf24l01pSetRX(void);
+void nrf24l01pSetTX(void);
 
 #endif
