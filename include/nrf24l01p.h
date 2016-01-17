@@ -1,4 +1,7 @@
-#include <stdint.h>
+#ifndef NRF24L01P_H
+#define NRF24L01P_H
+
+#include "driverlib.h"
 
 // nRF24L01+ Register Addresses
 #define      CONFIG 0x00
@@ -46,4 +49,20 @@
 #define W_TX_PAYLOAD_NOACK 0xB0
 #define                NOP 0xFF
 
-//uint16_t nRF24L01+_init(int8_t *buf);
+static uint8_t portCE, portCSN;
+static uint16_t pinCE, pinCSN;
+
+void nrf24l01pInitSPI(void);
+
+void nrf24l01pSetAsCE(uint8_t port, uint16_t pin);
+void nrf24l01pSetLowOnCE(void);
+void nrf24l01pSetHighOnCE(void);
+
+void nrf24l01pSetAsCSN(uint8_t port, uint16_t pin);
+void nrf24l01pSetLowOnCSN(void);
+void nrf24l01pSetHighOnCSN(void);
+
+void nrf24l01pPowerDown(void);
+void nrf24l01pPowerUp(void);
+
+#endif
