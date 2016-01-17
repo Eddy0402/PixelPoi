@@ -22,13 +22,17 @@
 #include "driverlib.h"
 #include "led.hpp"
 
+void transmitPicture(void);
+
 int main(void)
 {
     // Stop WDT_A
     WDT_A_hold(WDT_A_BASE);
 
-    LedController::init();
-    LedController::appSetup();
+	transmitPicture();
+
+    //LedController::init();
+    //LedController::appSetup();
 
     __bis_SR_register(LPM0_bits + GIE);
 }
