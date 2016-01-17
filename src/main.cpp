@@ -82,9 +82,12 @@ int main(void)
 
     initUCS();
 
-//    LedController::init();
-//    LedController::appSetup();
-//    LedController::start();
+    // Enable global interrupt
+    __bic_SR_register(GIE);
+
+    LedController::init();
+    LedController::appSetup();
+    LedController::start();
 
     __bis_SR_register(LPM0_bits + GIE);
 

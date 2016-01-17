@@ -50,17 +50,17 @@ void LedController::init()
     Timer_A_outputPWMParam ta1PwmParam;
     ta1PwmParam.clockSource = TIMER_A_CLOCKSOURCE_ACLK;
     ta1PwmParam.clockSourceDivider = TIMER_A_CLOCKSOURCE_DIVIDER_1;
-    ta1PwmParam.timerPeriod = 8192;
+    ta1PwmParam.timerPeriod = 179;
     ta1PwmParam.compareRegister = TIMER_A_CAPTURECOMPARE_REGISTER_1;
     ta1PwmParam.compareOutputMode = TIMER_A_OUTPUTMODE_SET_RESET;
-    ta1PwmParam.dutyCycle = 7680;
+    ta1PwmParam.dutyCycle = 170;
     Timer_A_outputPWM(TIMER_A0_BASE, &ta1PwmParam);
 
     // Timer_A0 for data output
     Timer_A_initUpModeParam ta0Param = {0};
     ta0Param.clockSource = TIMER_A_CLOCKSOURCE_ACLK;
     ta0Param.clockSourceDivider = TIMER_A_CLOCKSOURCE_DIVIDER_1;
-    ta0Param.timerPeriod = 8192;
+    ta0Param.timerPeriod = 179;
     ta0Param.timerInterruptEnable_TAIE = TIMER_A_TAIE_INTERRUPT_ENABLE;
     ta0Param.startTimer = true;
     Timer_A_initUpMode(TIMER_A0_BASE, &ta0Param);
@@ -72,6 +72,13 @@ void LedController::appSetup()
     chip0.setAllLED(1, 65535);
     chip0.setAllLED(2, 65535);
     chip0.getControlData()->DSPRPT = 1;
+    chip0.getControlData()->ESPWM = 1;
+    chip0.getControlData()->BC_R = 0x2F;
+    chip0.getControlData()->BC_G = 0x2F;
+    chip0.getControlData()->BC_B = 0x2F;
+    chip0.getControlData()->MC_R = 0x7;
+    chip0.getControlData()->MC_G = 0x7;
+    chip0.getControlData()->MC_B = 0x7;
     for (int i = 0; i < 21; ++i) chip0.getControlData()->DOTCOR[i] = 0xFFFF;
 }
 
@@ -116,7 +123,7 @@ __attribute__((__interrupt__(TIMER0_A1_VECTOR))) void TA0CCR_TA0IFG_ISR(void)
                         DMA_CHANNEL_0,
                         (uint32_t)LedController::chip0.getGSData(),
                         DMA_DIRECTION_INCREMENT);
-                    LedController::globalLight += 0x1000;
+                    LedController::globalLight += 0x0100;
                 } else {
                     ++writeControl;
                 }

@@ -25,7 +25,10 @@ struct __attribute__((__packed__)) ControlData {
 class TLC5955
 {
 public:
-    TLC5955() : controlData({}), gsDataCommand(), gsData(gsDataCommand+1) { controlData.MSBByte = 1; }
+    TLC5955() : controlData({}), gsDataCommand(), gsData(gsDataCommand+1) {
+        controlData.MSBByte = 1;
+        controlData.padding[0] = 0b10010110;
+    }
 
     void setLED(uint8_t color, uint8_t channel, uint16_t gs);
     void setAllLED(uint8_t color, uint16_t gs);
