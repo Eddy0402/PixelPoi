@@ -29,6 +29,9 @@ int main(void)
 
     LedController::init();
     LedController::appSetup();
+    LedController::start();
 
     __bis_SR_register(LPM0_bits + GIE);
+
+    while(1); /* should not reach here */
 }
