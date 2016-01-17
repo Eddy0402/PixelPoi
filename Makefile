@@ -59,6 +59,9 @@ flash:
 	LD_LIBRARY_PATH=$(FLASH_LIBDIR) $(FLASH) -w $(FIRMWARE) -v -g -z [VCC]
 	LD_LIBRARY_PATH=$(FLASH_LIBDIR) $(FLASH) -r [Firmware Output.txt,MAIN]
 
+flash2:
+	LD_LIBRARY_PATH=$(FLASH_LIBDIR) $(FLASH) -w $(FIRMWARE) -n MSP430F5529 -v -g -j fast
+
 clean:
 	rm -rf $(OBJS) $(FIRMWARE) $(ELFOUT) $(DEPENDS)
 
