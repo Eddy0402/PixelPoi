@@ -1,4 +1,4 @@
-#include "nrf24l01p.h"
+#include "nrf24l01p.hpp"
 
 void nrf24l01pInitSPI(void) {
     // P3.0 (UCB0SIMO), P3.1 (UCBSOMI), P3.2 (UCB0CLK)

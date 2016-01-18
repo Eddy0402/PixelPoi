@@ -22,14 +22,14 @@
 #include "driverlib.h"
 #include "led.hpp"
 
-void transmitPicture(void);
+void changePicture(void);
 
 int main(void)
 {
     // Stop WDT_A
     WDT_A_hold(WDT_A_BASE);
 
-	transmitPicture();
+	changePicture();
 
     //LedController::init();
     //LedController::appSetup();

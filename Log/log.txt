@@ -2845,3 +2845,744 @@ Sun Jan 17 00:24:18 2016:	* ----------------------------------------------------
 Sun Jan 17 00:24:18 2016:	* Driver      : closed (No error)
 Sun Jan 17 00:24:18 2016:	* ----------------------------------------------------------------------------
 Sun Jan 17 00:24:18 2016:	*/
+Sun Jan 17 23:53:37 2016:	* -----/|-------------------------------------------------------------------- *
+Sun Jan 17 23:53:37 2016:	*     / |__                                                                   *
+Sun Jan 17 23:53:37 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Sun Jan 17 23:53:37 2016:	*      | /                                                                    *
+Sun Jan 17 23:53:37 2016:	* -----|/-------------------------------------------------------------------- *
+Sun Jan 17 23:53:37 2016:	*
+Sun Jan 17 23:53:37 2016:	* Evaluating triggers...done
+Sun Jan 17 23:53:37 2016:	* Checking for available FET debuggers: 
+Sun Jan 17 23:53:37 2016:	* Found USB FET @ ttyACM0 <- Selected
+Sun Jan 17 23:53:37 2016:	* Initializing interface @ ttyACM0...done
+Sun Jan 17 23:53:37 2016:	* Checking firmware compatibility: 
+Sun Jan 17 23:53:37 2016:	* FET firmware is up to date.
+Sun Jan 17 23:53:37 2016:	* Reading FW version...done
+Sun Jan 17 23:53:37 2016:	* Setting VCC to 3000 mV...done
+Sun Jan 17 23:53:37 2016:	* Accessing device...done
+Sun Jan 17 23:53:37 2016:	* Reading device information...done
+Sun Jan 17 23:53:37 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Sun Jan 17 23:53:49 2016:	* 
+Sun Jan 17 23:53:49 2016:	* ----------------------------------------------------------------------------
+Sun Jan 17 23:53:49 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Sun Jan 17 23:53:49 2016:	* ----------------------------------------------------------------------------
+Sun Jan 17 23:53:49 2016:	* Driver      : loaded
+Sun Jan 17 23:53:49 2016:	* Dll Version : 30501001
+Sun Jan 17 23:53:49 2016:	* FwVersion   : 30501001
+Sun Jan 17 23:53:49 2016:	* Interface   : TIUSB
+Sun Jan 17 23:53:49 2016:	* HwVersion   : E 3.0
+Sun Jan 17 23:53:49 2016:	* JTAG Mode   : AUTO
+Sun Jan 17 23:53:49 2016:	* Device      : MSP430F5529
+Sun Jan 17 23:53:49 2016:	* EEM         : Level 7, ClockCntrl 2
+Sun Jan 17 23:53:49 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Sun Jan 17 23:53:49 2016:	* VCC OFF
+Sun Jan 17 23:53:49 2016:	* ----------------------------------------------------------------------------
+Sun Jan 17 23:53:49 2016:	* Powering down...done
+Sun Jan 17 23:53:49 2016:	* Disconnecting from device...done
+Sun Jan 17 23:53:49 2016:	* 
+Sun Jan 17 23:53:49 2016:	* ----------------------------------------------------------------------------
+Sun Jan 17 23:53:49 2016:	* Driver      : closed (No error)
+Sun Jan 17 23:53:49 2016:	* ----------------------------------------------------------------------------
+Sun Jan 17 23:53:49 2016:	*/
+Mon Jan 18 00:14:05 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 00:14:05 2016:	*     / |__                                                                   *
+Mon Jan 18 00:14:05 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 00:14:05 2016:	*      | /                                                                    *
+Mon Jan 18 00:14:05 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 00:14:05 2016:	*
+Mon Jan 18 00:14:05 2016:	* Evaluating triggers...done
+Mon Jan 18 00:14:05 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 00:14:05 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 00:14:05 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 00:14:05 2016:	* Checking firmware compatibility: 
+Mon Jan 18 00:14:05 2016:	* FET firmware is up to date.
+Mon Jan 18 00:14:05 2016:	* Reading FW version...done
+Mon Jan 18 00:14:05 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 00:14:05 2016:	* Accessing device...done
+Mon Jan 18 00:14:06 2016:	* Reading device information...done
+Mon Jan 18 00:14:06 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 00:14:17 2016:	* 
+Mon Jan 18 00:14:17 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:14:17 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 00:14:17 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:14:17 2016:	* Driver      : loaded
+Mon Jan 18 00:14:17 2016:	* Dll Version : 30501001
+Mon Jan 18 00:14:17 2016:	* FwVersion   : 30501001
+Mon Jan 18 00:14:17 2016:	* Interface   : TIUSB
+Mon Jan 18 00:14:17 2016:	* HwVersion   : E 3.0
+Mon Jan 18 00:14:17 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 00:14:17 2016:	* Device      : MSP430F5529
+Mon Jan 18 00:14:17 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 00:14:17 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 00:14:17 2016:	* VCC OFF
+Mon Jan 18 00:14:17 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:14:17 2016:	* Powering down...done
+Mon Jan 18 00:14:17 2016:	* Disconnecting from device...done
+Mon Jan 18 00:14:17 2016:	* 
+Mon Jan 18 00:14:17 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:14:17 2016:	* Driver      : closed (No error)
+Mon Jan 18 00:14:17 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:14:17 2016:	*/
+Mon Jan 18 00:19:14 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 00:19:14 2016:	*     / |__                                                                   *
+Mon Jan 18 00:19:14 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 00:19:14 2016:	*      | /                                                                    *
+Mon Jan 18 00:19:14 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 00:19:14 2016:	*
+Mon Jan 18 00:19:14 2016:	* Evaluating triggers...done
+Mon Jan 18 00:19:14 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 00:19:14 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 00:19:14 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 00:19:14 2016:	* Checking firmware compatibility: 
+Mon Jan 18 00:19:14 2016:	* FET firmware is up to date.
+Mon Jan 18 00:19:14 2016:	* Reading FW version...done
+Mon Jan 18 00:19:14 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 00:19:14 2016:	* Accessing device...done
+Mon Jan 18 00:19:15 2016:	* Reading device information...done
+Mon Jan 18 00:19:15 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 00:19:26 2016:	* 
+Mon Jan 18 00:19:26 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:19:26 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 00:19:26 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:19:26 2016:	* Driver      : loaded
+Mon Jan 18 00:19:26 2016:	* Dll Version : 30501001
+Mon Jan 18 00:19:26 2016:	* FwVersion   : 30501001
+Mon Jan 18 00:19:26 2016:	* Interface   : TIUSB
+Mon Jan 18 00:19:26 2016:	* HwVersion   : E 3.0
+Mon Jan 18 00:19:26 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 00:19:26 2016:	* Device      : MSP430F5529
+Mon Jan 18 00:19:26 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 00:19:26 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 00:19:26 2016:	* VCC OFF
+Mon Jan 18 00:19:26 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:19:26 2016:	* Powering down...done
+Mon Jan 18 00:19:26 2016:	* Disconnecting from device...done
+Mon Jan 18 00:19:26 2016:	* 
+Mon Jan 18 00:19:26 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:19:26 2016:	* Driver      : closed (No error)
+Mon Jan 18 00:19:26 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:19:26 2016:	*/
+Mon Jan 18 00:20:07 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 00:20:07 2016:	*     / |__                                                                   *
+Mon Jan 18 00:20:07 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 00:20:07 2016:	*      | /                                                                    *
+Mon Jan 18 00:20:07 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 00:20:07 2016:	*
+Mon Jan 18 00:20:07 2016:	* Evaluating triggers...done
+Mon Jan 18 00:20:07 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 00:20:07 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 00:20:07 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 00:20:07 2016:	* Checking firmware compatibility: 
+Mon Jan 18 00:20:07 2016:	* FET firmware is up to date.
+Mon Jan 18 00:20:07 2016:	* Reading FW version...done
+Mon Jan 18 00:20:07 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 00:20:07 2016:	* Accessing device...done
+Mon Jan 18 00:20:07 2016:	* Reading device information...done
+Mon Jan 18 00:20:07 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 00:20:19 2016:	* 
+Mon Jan 18 00:20:19 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:20:19 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 00:20:19 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:20:19 2016:	* Driver      : loaded
+Mon Jan 18 00:20:19 2016:	* Dll Version : 30501001
+Mon Jan 18 00:20:19 2016:	* FwVersion   : 30501001
+Mon Jan 18 00:20:19 2016:	* Interface   : TIUSB
+Mon Jan 18 00:20:19 2016:	* HwVersion   : E 3.0
+Mon Jan 18 00:20:19 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 00:20:19 2016:	* Device      : MSP430F5529
+Mon Jan 18 00:20:19 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 00:20:19 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 00:20:19 2016:	* VCC OFF
+Mon Jan 18 00:20:19 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:20:19 2016:	* Powering down...done
+Mon Jan 18 00:20:19 2016:	* Disconnecting from device...done
+Mon Jan 18 00:20:19 2016:	* 
+Mon Jan 18 00:20:19 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:20:19 2016:	* Driver      : closed (No error)
+Mon Jan 18 00:20:19 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:20:19 2016:	*/
+Mon Jan 18 00:20:49 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 00:20:49 2016:	*     / |__                                                                   *
+Mon Jan 18 00:20:49 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 00:20:49 2016:	*      | /                                                                    *
+Mon Jan 18 00:20:49 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 00:20:49 2016:	*
+Mon Jan 18 00:20:49 2016:	* Evaluating triggers...done
+Mon Jan 18 00:20:49 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 00:20:49 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 00:20:49 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 00:20:49 2016:	* Checking firmware compatibility: 
+Mon Jan 18 00:20:49 2016:	* FET firmware is up to date.
+Mon Jan 18 00:20:49 2016:	* Reading FW version...done
+Mon Jan 18 00:20:49 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 00:20:49 2016:	* Accessing device...done
+Mon Jan 18 00:20:49 2016:	* Reading device information...done
+Mon Jan 18 00:20:49 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 00:21:01 2016:	* 
+Mon Jan 18 00:21:01 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:21:01 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 00:21:01 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:21:01 2016:	* Driver      : loaded
+Mon Jan 18 00:21:01 2016:	* Dll Version : 30501001
+Mon Jan 18 00:21:01 2016:	* FwVersion   : 30501001
+Mon Jan 18 00:21:01 2016:	* Interface   : TIUSB
+Mon Jan 18 00:21:01 2016:	* HwVersion   : E 3.0
+Mon Jan 18 00:21:01 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 00:21:01 2016:	* Device      : MSP430F5529
+Mon Jan 18 00:21:01 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 00:21:01 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 00:21:01 2016:	* VCC OFF
+Mon Jan 18 00:21:01 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:21:01 2016:	* Powering down...done
+Mon Jan 18 00:21:01 2016:	* Disconnecting from device...done
+Mon Jan 18 00:21:01 2016:	* 
+Mon Jan 18 00:21:01 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:21:01 2016:	* Driver      : closed (No error)
+Mon Jan 18 00:21:01 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:21:01 2016:	*/
+Mon Jan 18 00:29:52 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 00:29:52 2016:	*     / |__                                                                   *
+Mon Jan 18 00:29:52 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 00:29:52 2016:	*      | /                                                                    *
+Mon Jan 18 00:29:52 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 00:29:52 2016:	*
+Mon Jan 18 00:29:52 2016:	* Evaluating triggers...done
+Mon Jan 18 00:29:52 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 00:29:52 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 00:29:52 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 00:29:52 2016:	* Checking firmware compatibility: 
+Mon Jan 18 00:29:52 2016:	* FET firmware is up to date.
+Mon Jan 18 00:29:52 2016:	* Reading FW version...done
+Mon Jan 18 00:29:52 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 00:29:52 2016:	* Accessing device...done
+Mon Jan 18 00:29:52 2016:	* Reading device information...done
+Mon Jan 18 00:29:52 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 00:30:04 2016:	* 
+Mon Jan 18 00:30:04 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:30:04 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 00:30:04 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:30:04 2016:	* Driver      : loaded
+Mon Jan 18 00:30:04 2016:	* Dll Version : 30501001
+Mon Jan 18 00:30:04 2016:	* FwVersion   : 30501001
+Mon Jan 18 00:30:04 2016:	* Interface   : TIUSB
+Mon Jan 18 00:30:04 2016:	* HwVersion   : E 3.0
+Mon Jan 18 00:30:04 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 00:30:04 2016:	* Device      : MSP430F5529
+Mon Jan 18 00:30:04 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 00:30:04 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 00:30:04 2016:	* VCC OFF
+Mon Jan 18 00:30:04 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:30:04 2016:	* Powering down...done
+Mon Jan 18 00:30:04 2016:	* Disconnecting from device...done
+Mon Jan 18 00:30:04 2016:	* 
+Mon Jan 18 00:30:04 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:30:04 2016:	* Driver      : closed (No error)
+Mon Jan 18 00:30:04 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:30:04 2016:	*/
+Mon Jan 18 00:33:40 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 00:33:40 2016:	*     / |__                                                                   *
+Mon Jan 18 00:33:40 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 00:33:40 2016:	*      | /                                                                    *
+Mon Jan 18 00:33:40 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 00:33:40 2016:	*
+Mon Jan 18 00:33:40 2016:	* Evaluating triggers...done
+Mon Jan 18 00:33:40 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 00:33:40 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 00:33:40 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 00:33:40 2016:	* Checking firmware compatibility: 
+Mon Jan 18 00:33:40 2016:	* FET firmware is up to date.
+Mon Jan 18 00:33:40 2016:	* Reading FW version...done
+Mon Jan 18 00:33:40 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 00:33:40 2016:	* Accessing device...done
+Mon Jan 18 00:33:41 2016:	* Reading device information...done
+Mon Jan 18 00:33:41 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 00:33:52 2016:	* 
+Mon Jan 18 00:33:52 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:33:52 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 00:33:52 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:33:52 2016:	* Driver      : loaded
+Mon Jan 18 00:33:52 2016:	* Dll Version : 30501001
+Mon Jan 18 00:33:52 2016:	* FwVersion   : 30501001
+Mon Jan 18 00:33:52 2016:	* Interface   : TIUSB
+Mon Jan 18 00:33:52 2016:	* HwVersion   : E 3.0
+Mon Jan 18 00:33:52 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 00:33:52 2016:	* Device      : MSP430F5529
+Mon Jan 18 00:33:52 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 00:33:52 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 00:33:52 2016:	* VCC OFF
+Mon Jan 18 00:33:52 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:33:52 2016:	* Powering down...done
+Mon Jan 18 00:33:52 2016:	* Disconnecting from device...done
+Mon Jan 18 00:33:52 2016:	* 
+Mon Jan 18 00:33:52 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:33:52 2016:	* Driver      : closed (No error)
+Mon Jan 18 00:33:52 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:33:52 2016:	*/
+Mon Jan 18 00:38:10 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 00:38:10 2016:	*     / |__                                                                   *
+Mon Jan 18 00:38:10 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 00:38:10 2016:	*      | /                                                                    *
+Mon Jan 18 00:38:10 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 00:38:10 2016:	*
+Mon Jan 18 00:38:10 2016:	* Evaluating triggers...done
+Mon Jan 18 00:38:10 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 00:38:11 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 00:38:11 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 00:38:11 2016:	* Checking firmware compatibility: 
+Mon Jan 18 00:38:11 2016:	* FET firmware is up to date.
+Mon Jan 18 00:38:11 2016:	* Reading FW version...done
+Mon Jan 18 00:38:11 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 00:38:11 2016:	* Accessing device...done
+Mon Jan 18 00:38:11 2016:	* Reading device information...done
+Mon Jan 18 00:38:11 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 00:38:23 2016:	* 
+Mon Jan 18 00:38:23 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:38:23 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 00:38:23 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:38:23 2016:	* Driver      : loaded
+Mon Jan 18 00:38:23 2016:	* Dll Version : 30501001
+Mon Jan 18 00:38:23 2016:	* FwVersion   : 30501001
+Mon Jan 18 00:38:23 2016:	* Interface   : TIUSB
+Mon Jan 18 00:38:23 2016:	* HwVersion   : E 3.0
+Mon Jan 18 00:38:23 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 00:38:23 2016:	* Device      : MSP430F5529
+Mon Jan 18 00:38:23 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 00:38:23 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 00:38:23 2016:	* VCC OFF
+Mon Jan 18 00:38:23 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:38:23 2016:	* Powering down...done
+Mon Jan 18 00:38:23 2016:	* Disconnecting from device...done
+Mon Jan 18 00:38:23 2016:	* 
+Mon Jan 18 00:38:23 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:38:23 2016:	* Driver      : closed (No error)
+Mon Jan 18 00:38:23 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:38:23 2016:	*/
+Mon Jan 18 00:59:00 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 00:59:00 2016:	*     / |__                                                                   *
+Mon Jan 18 00:59:00 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 00:59:00 2016:	*      | /                                                                    *
+Mon Jan 18 00:59:00 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 00:59:00 2016:	*
+Mon Jan 18 00:59:00 2016:	* Evaluating triggers...done
+Mon Jan 18 00:59:00 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 00:59:00 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 00:59:00 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 00:59:00 2016:	* Checking firmware compatibility: 
+Mon Jan 18 00:59:00 2016:	* FET firmware is up to date.
+Mon Jan 18 00:59:00 2016:	* Reading FW version...done
+Mon Jan 18 00:59:00 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 00:59:00 2016:	* Accessing device...done
+Mon Jan 18 00:59:00 2016:	* Reading device information...done
+Mon Jan 18 00:59:00 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 00:59:12 2016:	* 
+Mon Jan 18 00:59:12 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:59:12 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 00:59:12 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:59:12 2016:	* Driver      : loaded
+Mon Jan 18 00:59:12 2016:	* Dll Version : 30501001
+Mon Jan 18 00:59:12 2016:	* FwVersion   : 30501001
+Mon Jan 18 00:59:12 2016:	* Interface   : TIUSB
+Mon Jan 18 00:59:12 2016:	* HwVersion   : E 3.0
+Mon Jan 18 00:59:12 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 00:59:12 2016:	* Device      : MSP430F5529
+Mon Jan 18 00:59:12 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 00:59:12 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 00:59:12 2016:	* VCC OFF
+Mon Jan 18 00:59:12 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:59:12 2016:	* Powering down...done
+Mon Jan 18 00:59:12 2016:	* Disconnecting from device...done
+Mon Jan 18 00:59:12 2016:	* 
+Mon Jan 18 00:59:12 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:59:12 2016:	* Driver      : closed (No error)
+Mon Jan 18 00:59:12 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 00:59:12 2016:	*/
+Mon Jan 18 01:26:57 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 01:26:57 2016:	*     / |__                                                                   *
+Mon Jan 18 01:26:57 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 01:26:57 2016:	*      | /                                                                    *
+Mon Jan 18 01:26:57 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 01:26:57 2016:	*
+Mon Jan 18 01:26:57 2016:	* Evaluating triggers...done
+Mon Jan 18 01:26:57 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 01:26:57 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 01:26:57 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 01:26:58 2016:	* Checking firmware compatibility: 
+Mon Jan 18 01:26:58 2016:	* FET firmware is up to date.
+Mon Jan 18 01:26:58 2016:	* Reading FW version...done
+Mon Jan 18 01:26:58 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 01:26:58 2016:	* Accessing device...done
+Mon Jan 18 01:26:58 2016:	* Reading device information...done
+Mon Jan 18 01:26:58 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 01:27:10 2016:	* 
+Mon Jan 18 01:27:10 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:27:10 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 01:27:10 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:27:10 2016:	* Driver      : loaded
+Mon Jan 18 01:27:10 2016:	* Dll Version : 30501001
+Mon Jan 18 01:27:10 2016:	* FwVersion   : 30501001
+Mon Jan 18 01:27:10 2016:	* Interface   : TIUSB
+Mon Jan 18 01:27:10 2016:	* HwVersion   : E 3.0
+Mon Jan 18 01:27:10 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 01:27:10 2016:	* Device      : MSP430F5529
+Mon Jan 18 01:27:10 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 01:27:10 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 01:27:10 2016:	* VCC OFF
+Mon Jan 18 01:27:10 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:27:10 2016:	* Powering down...done
+Mon Jan 18 01:27:10 2016:	* Disconnecting from device...done
+Mon Jan 18 01:27:10 2016:	* 
+Mon Jan 18 01:27:10 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:27:10 2016:	* Driver      : closed (No error)
+Mon Jan 18 01:27:10 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:27:10 2016:	*/
+Mon Jan 18 01:35:37 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 01:35:37 2016:	*     / |__                                                                   *
+Mon Jan 18 01:35:37 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 01:35:37 2016:	*      | /                                                                    *
+Mon Jan 18 01:35:37 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 01:35:37 2016:	*
+Mon Jan 18 01:35:37 2016:	* Evaluating triggers...done
+Mon Jan 18 01:35:37 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 01:35:38 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 01:35:38 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 01:35:38 2016:	* Checking firmware compatibility: 
+Mon Jan 18 01:35:38 2016:	* FET firmware is up to date.
+Mon Jan 18 01:35:38 2016:	* Reading FW version...done
+Mon Jan 18 01:35:38 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 01:35:38 2016:	* Accessing device...done
+Mon Jan 18 01:35:38 2016:	* Reading device information...done
+Mon Jan 18 01:35:38 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 01:35:50 2016:	* 
+Mon Jan 18 01:35:50 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:35:50 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 01:35:50 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:35:50 2016:	* Driver      : loaded
+Mon Jan 18 01:35:50 2016:	* Dll Version : 30501001
+Mon Jan 18 01:35:50 2016:	* FwVersion   : 30501001
+Mon Jan 18 01:35:50 2016:	* Interface   : TIUSB
+Mon Jan 18 01:35:50 2016:	* HwVersion   : E 3.0
+Mon Jan 18 01:35:50 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 01:35:50 2016:	* Device      : MSP430F5529
+Mon Jan 18 01:35:50 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 01:35:50 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 01:35:50 2016:	* VCC OFF
+Mon Jan 18 01:35:50 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:35:50 2016:	* Powering down...done
+Mon Jan 18 01:35:50 2016:	* Disconnecting from device...done
+Mon Jan 18 01:35:50 2016:	* 
+Mon Jan 18 01:35:50 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:35:50 2016:	* Driver      : closed (No error)
+Mon Jan 18 01:35:50 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:35:50 2016:	*/
+Mon Jan 18 01:37:15 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 01:37:15 2016:	*     / |__                                                                   *
+Mon Jan 18 01:37:15 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 01:37:15 2016:	*      | /                                                                    *
+Mon Jan 18 01:37:15 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 01:37:15 2016:	*
+Mon Jan 18 01:37:15 2016:	* Evaluating triggers...done
+Mon Jan 18 01:37:15 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 01:37:15 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 01:37:15 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 01:37:16 2016:	* Checking firmware compatibility: 
+Mon Jan 18 01:37:16 2016:	* FET firmware is up to date.
+Mon Jan 18 01:37:16 2016:	* Reading FW version...done
+Mon Jan 18 01:37:16 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 01:37:16 2016:	* Accessing device...done
+Mon Jan 18 01:37:16 2016:	* Reading device information...done
+Mon Jan 18 01:37:16 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 01:37:28 2016:	* 
+Mon Jan 18 01:37:28 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:37:28 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 01:37:28 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:37:28 2016:	* Driver      : loaded
+Mon Jan 18 01:37:28 2016:	* Dll Version : 30501001
+Mon Jan 18 01:37:28 2016:	* FwVersion   : 30501001
+Mon Jan 18 01:37:28 2016:	* Interface   : TIUSB
+Mon Jan 18 01:37:28 2016:	* HwVersion   : E 3.0
+Mon Jan 18 01:37:28 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 01:37:28 2016:	* Device      : MSP430F5529
+Mon Jan 18 01:37:28 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 01:37:28 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 01:37:28 2016:	* VCC OFF
+Mon Jan 18 01:37:28 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:37:28 2016:	* Powering down...done
+Mon Jan 18 01:37:28 2016:	* Disconnecting from device...done
+Mon Jan 18 01:37:28 2016:	* 
+Mon Jan 18 01:37:28 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:37:28 2016:	* Driver      : closed (No error)
+Mon Jan 18 01:37:28 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:37:28 2016:	*/
+Mon Jan 18 01:41:30 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 01:41:30 2016:	*     / |__                                                                   *
+Mon Jan 18 01:41:30 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 01:41:30 2016:	*      | /                                                                    *
+Mon Jan 18 01:41:30 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 01:41:30 2016:	*
+Mon Jan 18 01:41:30 2016:	* Evaluating triggers...done
+Mon Jan 18 01:41:30 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 01:41:30 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 01:41:30 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 01:41:31 2016:	* Checking firmware compatibility: 
+Mon Jan 18 01:41:31 2016:	* FET firmware is up to date.
+Mon Jan 18 01:41:31 2016:	* Reading FW version...done
+Mon Jan 18 01:41:31 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 01:41:31 2016:	* Accessing device...done
+Mon Jan 18 01:41:31 2016:	* Reading device information...done
+Mon Jan 18 01:41:31 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 01:41:43 2016:	* 
+Mon Jan 18 01:41:43 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:41:43 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 01:41:43 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:41:43 2016:	* Driver      : loaded
+Mon Jan 18 01:41:43 2016:	* Dll Version : 30501001
+Mon Jan 18 01:41:43 2016:	* FwVersion   : 30501001
+Mon Jan 18 01:41:43 2016:	* Interface   : TIUSB
+Mon Jan 18 01:41:43 2016:	* HwVersion   : E 3.0
+Mon Jan 18 01:41:43 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 01:41:43 2016:	* Device      : MSP430F5529
+Mon Jan 18 01:41:43 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 01:41:43 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 01:41:43 2016:	* VCC OFF
+Mon Jan 18 01:41:43 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:41:43 2016:	* Powering down...done
+Mon Jan 18 01:41:43 2016:	* Disconnecting from device...done
+Mon Jan 18 01:41:43 2016:	* 
+Mon Jan 18 01:41:43 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:41:43 2016:	* Driver      : closed (No error)
+Mon Jan 18 01:41:43 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 01:41:43 2016:	*/
+Mon Jan 18 12:21:28 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 12:21:28 2016:	*     / |__                                                                   *
+Mon Jan 18 12:21:28 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 12:21:28 2016:	*      | /                                                                    *
+Mon Jan 18 12:21:28 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 12:21:28 2016:	*
+Mon Jan 18 12:21:28 2016:	* Evaluating triggers...done
+Mon Jan 18 12:21:28 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 12:21:28 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 12:21:28 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 12:21:28 2016:	* Checking firmware compatibility: 
+Mon Jan 18 12:21:28 2016:	* FET firmware is up to date.
+Mon Jan 18 12:21:28 2016:	* Reading FW version...done
+Mon Jan 18 12:21:28 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 12:21:28 2016:	* Accessing device...done
+Mon Jan 18 12:21:29 2016:	* Reading device information...done
+Mon Jan 18 12:21:29 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 12:21:40 2016:	* 
+Mon Jan 18 12:21:40 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 12:21:40 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 12:21:40 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 12:21:40 2016:	* Driver      : loaded
+Mon Jan 18 12:21:40 2016:	* Dll Version : 30501001
+Mon Jan 18 12:21:40 2016:	* FwVersion   : 30501001
+Mon Jan 18 12:21:40 2016:	* Interface   : TIUSB
+Mon Jan 18 12:21:40 2016:	* HwVersion   : E 3.0
+Mon Jan 18 12:21:40 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 12:21:40 2016:	* Device      : MSP430F5529
+Mon Jan 18 12:21:40 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 12:21:40 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 12:21:40 2016:	* VCC OFF
+Mon Jan 18 12:21:40 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 12:21:40 2016:	* Powering down...done
+Mon Jan 18 12:21:40 2016:	* Disconnecting from device...done
+Mon Jan 18 12:21:40 2016:	* 
+Mon Jan 18 12:21:40 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 12:21:40 2016:	* Driver      : closed (No error)
+Mon Jan 18 12:21:40 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 12:21:40 2016:	*/
+Mon Jan 18 12:22:32 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 12:22:32 2016:	*     / |__                                                                   *
+Mon Jan 18 12:22:32 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 12:22:32 2016:	*      | /                                                                    *
+Mon Jan 18 12:22:32 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 12:22:32 2016:	*
+Mon Jan 18 12:22:32 2016:	* Evaluating triggers...done
+Mon Jan 18 12:22:32 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 12:22:32 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 12:22:32 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 12:22:32 2016:	* Checking firmware compatibility: 
+Mon Jan 18 12:22:32 2016:	* FET firmware is up to date.
+Mon Jan 18 12:22:32 2016:	* Reading FW version...done
+Mon Jan 18 12:22:32 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 12:22:32 2016:	* Accessing device...done
+Mon Jan 18 12:22:33 2016:	* Reading device information...done
+Mon Jan 18 12:22:33 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 12:22:44 2016:	* 
+Mon Jan 18 12:22:44 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 12:22:44 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 12:22:44 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 12:22:44 2016:	* Driver      : loaded
+Mon Jan 18 12:22:44 2016:	* Dll Version : 30501001
+Mon Jan 18 12:22:44 2016:	* FwVersion   : 30501001
+Mon Jan 18 12:22:44 2016:	* Interface   : TIUSB
+Mon Jan 18 12:22:44 2016:	* HwVersion   : E 3.0
+Mon Jan 18 12:22:44 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 12:22:44 2016:	* Device      : MSP430F5529
+Mon Jan 18 12:22:44 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 12:22:44 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 12:22:44 2016:	* VCC OFF
+Mon Jan 18 12:22:44 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 12:22:44 2016:	* Powering down...done
+Mon Jan 18 12:22:45 2016:	* Disconnecting from device...done
+Mon Jan 18 12:22:45 2016:	* 
+Mon Jan 18 12:22:45 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 12:22:45 2016:	* Driver      : closed (No error)
+Mon Jan 18 12:22:45 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 12:22:45 2016:	*/
+Mon Jan 18 17:00:10 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 17:00:10 2016:	*     / |__                                                                   *
+Mon Jan 18 17:00:10 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 17:00:10 2016:	*      | /                                                                    *
+Mon Jan 18 17:00:10 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 17:00:10 2016:	*
+Mon Jan 18 17:00:10 2016:	* Evaluating triggers...done
+Mon Jan 18 17:00:10 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 17:00:10 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 17:00:10 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 17:00:10 2016:	* Checking firmware compatibility: 
+Mon Jan 18 17:00:10 2016:	* FET firmware is up to date.
+Mon Jan 18 17:00:10 2016:	* Reading FW version...done
+Mon Jan 18 17:00:10 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 17:00:10 2016:	* Accessing device...done
+Mon Jan 18 17:00:10 2016:	* Reading device information...done
+Mon Jan 18 17:00:10 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 17:00:22 2016:	* 
+Mon Jan 18 17:00:22 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:00:22 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 17:00:22 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:00:22 2016:	* Driver      : loaded
+Mon Jan 18 17:00:22 2016:	* Dll Version : 30501001
+Mon Jan 18 17:00:22 2016:	* FwVersion   : 30501001
+Mon Jan 18 17:00:22 2016:	* Interface   : TIUSB
+Mon Jan 18 17:00:22 2016:	* HwVersion   : E 3.0
+Mon Jan 18 17:00:22 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 17:00:22 2016:	* Device      : MSP430F5529
+Mon Jan 18 17:00:22 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 17:00:22 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 17:00:22 2016:	* VCC OFF
+Mon Jan 18 17:00:22 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:00:22 2016:	* Powering down...done
+Mon Jan 18 17:00:22 2016:	* Disconnecting from device...done
+Mon Jan 18 17:00:22 2016:	* 
+Mon Jan 18 17:00:22 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:00:22 2016:	* Driver      : closed (No error)
+Mon Jan 18 17:00:22 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:00:22 2016:	*/
+Mon Jan 18 17:22:47 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 17:22:47 2016:	*     / |__                                                                   *
+Mon Jan 18 17:22:47 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 17:22:47 2016:	*      | /                                                                    *
+Mon Jan 18 17:22:47 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 17:22:47 2016:	*
+Mon Jan 18 17:22:47 2016:	* Evaluating triggers...done
+Mon Jan 18 17:22:47 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 17:22:48 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 17:22:48 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 17:22:48 2016:	* Checking firmware compatibility: 
+Mon Jan 18 17:22:48 2016:	* FET firmware is up to date.
+Mon Jan 18 17:22:48 2016:	* Reading FW version...done
+Mon Jan 18 17:22:48 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 17:22:48 2016:	* Accessing device...done
+Mon Jan 18 17:22:48 2016:	* Reading device information...done
+Mon Jan 18 17:22:48 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 17:23:00 2016:	* 
+Mon Jan 18 17:23:00 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:23:00 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 17:23:00 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:23:00 2016:	* Driver      : loaded
+Mon Jan 18 17:23:00 2016:	* Dll Version : 30501001
+Mon Jan 18 17:23:00 2016:	* FwVersion   : 30501001
+Mon Jan 18 17:23:00 2016:	* Interface   : TIUSB
+Mon Jan 18 17:23:00 2016:	* HwVersion   : E 3.0
+Mon Jan 18 17:23:00 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 17:23:00 2016:	* Device      : MSP430F5529
+Mon Jan 18 17:23:00 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 17:23:00 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 17:23:00 2016:	* VCC OFF
+Mon Jan 18 17:23:00 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:23:00 2016:	* Powering down...done
+Mon Jan 18 17:23:00 2016:	* Disconnecting from device...done
+Mon Jan 18 17:23:00 2016:	* 
+Mon Jan 18 17:23:00 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:23:00 2016:	* Driver      : closed (No error)
+Mon Jan 18 17:23:00 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:23:00 2016:	*/
+Mon Jan 18 17:23:45 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 17:23:45 2016:	*     / |__                                                                   *
+Mon Jan 18 17:23:45 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 17:23:45 2016:	*      | /                                                                    *
+Mon Jan 18 17:23:45 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 17:23:45 2016:	*
+Mon Jan 18 17:23:45 2016:	* Evaluating triggers...done
+Mon Jan 18 17:23:45 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 17:23:45 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 17:23:45 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 17:23:45 2016:	* Checking firmware compatibility: 
+Mon Jan 18 17:23:45 2016:	* FET firmware is up to date.
+Mon Jan 18 17:23:45 2016:	* Reading FW version...done
+Mon Jan 18 17:23:45 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 17:23:45 2016:	* Accessing device...done
+Mon Jan 18 17:23:45 2016:	* Reading device information...done
+Mon Jan 18 17:23:45 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 17:23:57 2016:	* 
+Mon Jan 18 17:23:57 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:23:57 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 17:23:57 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:23:57 2016:	* Driver      : loaded
+Mon Jan 18 17:23:57 2016:	* Dll Version : 30501001
+Mon Jan 18 17:23:57 2016:	* FwVersion   : 30501001
+Mon Jan 18 17:23:57 2016:	* Interface   : TIUSB
+Mon Jan 18 17:23:57 2016:	* HwVersion   : E 3.0
+Mon Jan 18 17:23:57 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 17:23:57 2016:	* Device      : MSP430F5529
+Mon Jan 18 17:23:57 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 17:23:57 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 17:23:57 2016:	* VCC OFF
+Mon Jan 18 17:23:57 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:23:57 2016:	* Powering down...done
+Mon Jan 18 17:23:57 2016:	* Disconnecting from device...done
+Mon Jan 18 17:23:57 2016:	* 
+Mon Jan 18 17:23:57 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:23:57 2016:	* Driver      : closed (No error)
+Mon Jan 18 17:23:57 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:23:57 2016:	*/
+Mon Jan 18 17:29:33 2016:	* -----/|-------------------------------------------------------------------- *
+Mon Jan 18 17:29:33 2016:	*     / |__                                                                   *
+Mon Jan 18 17:29:33 2016:	*    /_   /   MSP430 Flasher v1.3.7                                           *
+Mon Jan 18 17:29:33 2016:	*      | /                                                                    *
+Mon Jan 18 17:29:33 2016:	* -----|/-------------------------------------------------------------------- *
+Mon Jan 18 17:29:33 2016:	*
+Mon Jan 18 17:29:33 2016:	* Evaluating triggers...done
+Mon Jan 18 17:29:33 2016:	* Checking for available FET debuggers: 
+Mon Jan 18 17:29:33 2016:	* Found USB FET @ ttyACM0 <- Selected
+Mon Jan 18 17:29:33 2016:	* Initializing interface @ ttyACM0...done
+Mon Jan 18 17:29:33 2016:	* Checking firmware compatibility: 
+Mon Jan 18 17:29:33 2016:	* FET firmware is up to date.
+Mon Jan 18 17:29:33 2016:	* Reading FW version...done
+Mon Jan 18 17:29:33 2016:	* Setting VCC to 3000 mV...done
+Mon Jan 18 17:29:33 2016:	* Accessing device...done
+Mon Jan 18 17:29:33 2016:	* Reading device information...done
+Mon Jan 18 17:29:33 2016:	* Dumping memory from MAIN into Firmware Output.txt...done
+Mon Jan 18 17:29:45 2016:	* 
+Mon Jan 18 17:29:45 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:29:45 2016:	* Arguments   : -r [Firmware Output.txt,MAIN] 
+Mon Jan 18 17:29:45 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:29:45 2016:	* Driver      : loaded
+Mon Jan 18 17:29:45 2016:	* Dll Version : 30501001
+Mon Jan 18 17:29:45 2016:	* FwVersion   : 30501001
+Mon Jan 18 17:29:45 2016:	* Interface   : TIUSB
+Mon Jan 18 17:29:45 2016:	* HwVersion   : E 3.0
+Mon Jan 18 17:29:45 2016:	* JTAG Mode   : AUTO
+Mon Jan 18 17:29:45 2016:	* Device      : MSP430F5529
+Mon Jan 18 17:29:45 2016:	* EEM         : Level 7, ClockCntrl 2
+Mon Jan 18 17:29:45 2016:	* Read File   : Firmware Output.txt (memory segment = MAIN)
+Mon Jan 18 17:29:45 2016:	* VCC OFF
+Mon Jan 18 17:29:45 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:29:45 2016:	* Powering down...done
+Mon Jan 18 17:29:45 2016:	* Disconnecting from device...done
+Mon Jan 18 17:29:45 2016:	* 
+Mon Jan 18 17:29:45 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:29:45 2016:	* Driver      : closed (No error)
+Mon Jan 18 17:29:45 2016:	* ----------------------------------------------------------------------------
+Mon Jan 18 17:29:45 2016:	*/
