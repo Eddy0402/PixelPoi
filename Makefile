@@ -51,8 +51,10 @@ $(ELFOUT): $(OBJS)
 	@echo " LD      " $@
 	@$(CC) $(CFLAGS) $(LFLAGS) $^ -o $@
 
+debug_server: all
+	$(GDB_SERVER) $(GDB_SERVER_DAT)
+
 debug: all
-	$(GDB_SERVER) $(GDB_SERVER_DAT) &
 	$(GDB) $(ELFOUT) -x tools/gdbscript
 
 flash:
