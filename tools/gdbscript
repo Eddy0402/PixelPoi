@@ -1,3 +1,4 @@
 target remote :55000
 layout reg
 layout asm
+layout src
