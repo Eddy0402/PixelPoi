@@ -113,17 +113,17 @@ __attribute__((__interrupt__(TIMER0_A1_VECTOR))) void TA0CCR_TA0IFG_ISR(void)
         case 0x0E:  // TA0CTL TAIFG
             if (::start) {
                 if (writeControl == 2) {
-                    LedController::chip0.setAllLED(0,
-                                                   LedController::globalLight);
-                    LedController::chip0.setAllLED(1,
-                                                   LedController::globalLight);
-                    LedController::chip0.setAllLED(2,
-                                                   LedController::globalLight);
+//                    LedController::chip0.setAllLED(0,
+//                                                   LedController::globalLight);
+//                    LedController::chip0.setAllLED(1,
+//                                                   LedController::globalLight);
+//                    LedController::chip0.setAllLED(2,
+//                                                   LedController::globalLight);
                     DMA_setSrcAddress(
                         DMA_CHANNEL_0,
                         (uint32_t)LedController::chip0.getGSData(),
                         DMA_DIRECTION_INCREMENT);
-                    LedController::globalLight += 0x0100;
+//                    LedController::globalLight += 0x0100;
                 } else {
                     ++writeControl;
                 }
@@ -141,6 +141,7 @@ __attribute__((__interrupt__(TIMER0_A1_VECTOR))) void TA0CCR_TA0IFG_ISR(void)
                     // Set
                     UCA0IFG |= UCTXIFG;
                 }
+                __bic_SR_register_on_exit(LPM0_bits); /* Back to main loop */
             }
             break;
     }

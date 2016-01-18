@@ -21,19 +21,26 @@
 #include <stdlib.h>
 #include "driverlib.h"
 #include "led.hpp"
+#include "mpu6050.hpp"
+
+static void __attribute__((naked, section(".crt_0042"), used))
+disable_watchdog(void)
+{
+    __asm__("MOV.W	#23168, &0x015C");
+}
 
 #define UCS_MCLK_DESIRED_FREQUENCY_IN_KHZ   12000
 #define UCS_MCLK_FLLREF_RATIO   366
 
 /*
  * Init clock system as follow:
- * MCLK:
- * SMCLK:
- * ACLK:
+ * MCLK: 12 MHz
+ * SMCLK: 12 MHz
+ * ACLK: 32.767 KHz
  */
 void initUCS(){
     //Set VCore = 1 for 12MHz clock
-    PMM_setVCore(PMM_CORE_LEVEL_1);
+    PMM_setVCore(PMM_CORE_LEVEL_2);
 
     //Set DCO FLL reference = REFO
     UCS_initClockSignal(
@@ -77,19 +84,24 @@ void NMI_ISR(void)
 
 int main(void)
 {
-    // Stop WDT_A
-    WDT_A_hold(WDT_A_BASE);
-
     initUCS();
 
-    // Enable global interrupt
-    __bic_SR_register(GIE);
+    MPU6050::hwInit();
+    MPU6050::initializeIMU();
 
     LedController::init();
     LedController::appSetup();
     LedController::start();
 
     __bis_SR_register(LPM0_bits + GIE);
+    while(1){
+        static int16_t ax, ay, az;
+        static int16_t gx, gy, gz;
+        MPU6050::getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&ax));
+        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&ay));
+        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&az));
 
-    while(1); /* should not reach here */
+        __bis_SR_register(LPM0_bits + GIE);
+    }
 }
