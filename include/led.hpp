@@ -14,6 +14,7 @@ namespace LedController{
 
     extern uint16_t globalLight;
     extern TLC5955 chip[];
+    void switchid();
 }
 
 #endif

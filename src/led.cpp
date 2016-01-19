@@ -1,4 +1,5 @@
 #include "led.hpp"
+#include "misc.hpp"
 #include "driverlib.h"
 #include "tlc5955.hpp"
 
@@ -91,7 +92,7 @@ void LedController::init()
 
     //const uint16_t period = 179;
     //const uint16_t factor = 64;
-    const uint16_t period = 17900;
+    const uint16_t period = 862;
     const uint16_t factor = 64;
     // Timer output mode set/reset for lat signal
     Timer_A_outputPWMParam ta1PwmParam;
@@ -120,10 +121,10 @@ void LedController::appSetup()
         chip[chipid].setAllLED(1, 500);
         chip[chipid].setAllLED(2, 500);
         chip[chipid].getControlData()->ESPWM = 1;
-        chip[chipid].getControlData()->RFRESH= 1;
+        chip[chipid].getControlData()->TWGRST= 1;
         chip[chipid].getControlData()->DSPRPT = 1;
-        chip[chipid].getControlData()->BC_R = 0x1F;
-        chip[chipid].getControlData()->BC_G = 0x1F;
+        chip[chipid].getControlData()->BC_R = 0x7F;
+        chip[chipid].getControlData()->BC_G = 0x4F;
         chip[chipid].getControlData()->BC_B = 0x1F;
         chip[chipid].getControlData()->MC_R = 0x3;
         chip[chipid].getControlData()->MC_G = 0x3;
@@ -160,12 +161,41 @@ TLC5955 *LedController::getTLCModule(int n)
     }
 }
 
+uint8_t mode = 0;
+uint8_t id = 0;
+uint8_t idcount = 1;
+
+void LedController::switchid(){
+    id++;
+    if(id >= idcount) id = 0;
+}
+
+uint16_t time = 0;
+
 __attribute__((__interrupt__(TIMER0_A1_VECTOR))) void TA0CCR_TA0IFG_ISR(void)
 {
     switch (__even_in_range(TA0IV, 0x0E)) {
         case 0x0E:  // TA0CTL TAIFG
             if (::start) {
                 if (writeControl == 2) {
+                    time++;
+                    getImgRange(
+                                mode,
+                                id,
+                                time,
+                                LedController::getTLCModule(0)->getGSData(),
+                                0,
+                                16
+                               );
+                    getImgRange(
+                                mode,
+                                id,
+                                time,
+                                LedController::getTLCModule(1)->getGSData(),
+                                17,
+                                32
+                               );
+
                     DMA_setSrcAddress(
                         DMA_CHANNEL_0,
                         (uint32_t)LedController::chip[0].getGSDataCommand(),
@@ -204,10 +234,10 @@ __attribute__((__interrupt__(TIMER0_A1_VECTOR))) void TA0CCR_TA0IFG_ISR(void)
                     // Set
                     UCA1IFG |= UCTXIFG;
                 }
-                __bic_SR_register_on_exit(LPM0_bits); /* Back to main loop */
             }
             break;
     }
+//    __bic_SR_register_on_exit(LPM0_bits); /* Back to main loop */
 }
 
 __attribute__((__interrupt__(DMA_VECTOR))) void DMA_ISR(void)

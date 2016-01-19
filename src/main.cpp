@@ -86,49 +86,29 @@ void NMI_ISR(void)
 static int16_t ax = 32767, ay = 32767, az = 32767;
 static int16_t gx = 32767, gy = 32767, gz = 32767;
 
-uint8_t mode = 0;
-uint8_t id = 0;
-uint16_t time = 0;
-
 int main(void)
 {
     initUCS();
 
-    MPU6050::hwInit();
-    MPU6050::initializeIMU();
-
+//    MPU6050::hwInit();
+//    MPU6050::initializeIMU();
+//
     LedController::init();
     LedController::appSetup();
     LedController::start();
 
-    __bis_SR_register(LPM0_bits + GIE);
+    __bis_SR_register(GIE);
+    __asm__("nop");
 
-    P1DIR = GPIO_PIN0;
+    P2REN |= GPIO_PIN1;
+    P2OUT |= GPIO_PIN1;
+
     while(1){
+        if(P2IN & GPIO_PIN1){
+            LedController::switchid();
+        }
 //        if(MPU6050::DataReady){
 //            MPU6050::getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
 //        }
-        P1OUT ^= GPIO_PIN0;
-        time++;
-
-        getImgRange(
-                    mode,
-                    id,
-                    time,
-                    reinterpret_cast<uint8_t *>(LedController::getTLCModule(0)->getGSData()),
-                    0,
-                    16
-                   );
-        getImgRange(
-                    mode,
-                    id,
-                    time,
-                    reinterpret_cast<uint8_t *>(LedController::getTLCModule(1)->getGSData()),
-                    17,
-                    32
-                   );
-
-
-        __bis_SR_register(LPM0_bits + GIE);
     }
 }
