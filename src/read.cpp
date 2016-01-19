@@ -30,7 +30,7 @@ uint16_t getImg(uint8_t mode, uint8_t id, uint16_t time, uint8_t *buf) {
     uint16_t startAddress = imageAddress + sizeof(Image);
 
     for (int i = 0; i < 32; ++i)
-        memcpy(buf + i * 3, imagedata + startAddress + i * img.width * 3, sizeof(uint8_t) * 3);
+        memcpy(buf + i * 3, imagedata + startAddress + i * img.width * 3 + time % img.width, sizeof(uint8_t) * 3);
 
     return time % img.width;
 }
