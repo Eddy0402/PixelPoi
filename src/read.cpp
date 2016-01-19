@@ -34,3 +34,12 @@ uint16_t getImg(uint8_t mode, uint8_t id, uint16_t time, uint8_t *buf) {
 
     return time % img.width;
 }
+
+uint16_t getImgRange(uint8_t mode, uint8_t id, uint16_t time, uint8_t *buf, uint16_t, uint8_t start, uint8_t end) {
+	uint8_t tmpBuf[32*3];
+
+	uint16_t ret = getImg(mode, id, time, tmpBuf);
+	memcpy(buf, tmpBuf + start * 3, sizeof(uint8_t) * (end - start) * 3);
+		
+	return ret;
+}
