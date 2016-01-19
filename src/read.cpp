@@ -4,9 +4,30 @@
 #include "Count.hpp"
 #include "Image.hpp"
 
-uint16_t getImg(uint8_t mode, uint8_t id, uint16_t time, uint8_t *buf) {
-    Mode m;
-    memcpy(&m, imagedata, sizeof(Mode));
+const int map[] = {
+    20, 16, 21, 17, 18, 22, 19, 24, 28, 25, 29, 30, 26, 31, 27, 23,7, 11, 15, 10, 14, 13, 9, 12, 8, 3, 6, 2, 1, 5, 0, 4,};
+
+void getImgRangeSpecial(uint8_t mode, uint8_t id, uint16_t time, uint16_t *buf, uint8_t start, uint8_t end) {
+    time = time % 32;
+
+    for(int i = 0;i < 32; ++i){
+        int r = map[i];
+        if(r >= start && r < end){
+            int c = 0;
+            buf[(r - start) * 3 + c] = 65535;//((i + 32 - time) % 32) > 16 ? 65535 : 0;
+            c = 1;
+            buf[(r - start) * 3 + c] = 65535;//((i + 48 - time) % 32) > 16 ? 65535 : 0;
+            c = 2;
+            buf[(r - start) * 3 + c] = 65535;//((i + 40 - time) % 32) > 16 ? 65535 : 0;
+        }
+    }
+}
+void getImgRange(uint8_t mode, uint8_t id, uint16_t time, uint16_t *buf, uint8_t start, uint8_t end) {
+    if(mode == 3){
+        getImgRangeSpecial(mode,id,time,buf,start,end);
+        //return;
+    }
+    const Mode &m = *reinterpret_cast<const Mode *>(imagedata);
     uint8_t indexAddress;
     switch (mode) {
         case 0:
@@ -20,28 +41,20 @@ uint16_t getImg(uint8_t mode, uint8_t id, uint16_t time, uint8_t *buf) {
             break;
     }
 
-    Count count;
-    memcpy(&count, imagedata + indexAddress, sizeof(Count));
-    uint16_t imageAddress;
-    memcpy(&imageAddress, imagedata + indexAddress + sizeof(Count) + id*sizeof(uint16_t), sizeof(uint16_t));
+    const Count &count = *reinterpret_cast<const Count *>(imagedata + indexAddress);
+    const uint16_t imageAddress = *reinterpret_cast<const uint16_t*>(imagedata + indexAddress + sizeof(Count) + id * sizeof(uint16_t));
 
-    Image img;
-    memcpy(&img, imagedata + imageAddress, sizeof(Image));
-    uint16_t startAddress = imageAddress + sizeof(Image);
+    const Image &img = *reinterpret_cast<const Image *>(imagedata + imageAddress);
+    time = time % img.width;
+    uint16_t startAddress = imageAddress + sizeof(Image) + time * img.height * 3;
+    const uint8_t *raw = imagedata + startAddress;
 
-    for (int i = 0; i < 32; ++i)
-        memcpy(buf + i * 3, imagedata + startAddress + i * img.width * 3 + time % img.width * 3, sizeof(uint8_t) * 3);
-
-    return time % img.width;
-}
-
-uint16_t getImgRange(uint8_t mode, uint8_t id, uint16_t time, uint16_t *buf, uint8_t start, uint8_t end) {
-	uint8_t tmpBuf[32*3];
-
-	uint16_t ret = getImg(mode, id, time, tmpBuf);
-    for(int i = start * 3,j = 0; i < end * 3;++i,++j){
-        buf[j] = ((uint16_t)tmpBuf[i]) << 8;
+    for(int i = 0; i < 32;++i){
+        int r = map[i];
+        if(r >= start && r < end){
+            for(int k = 0;k < 3;++k){
+                buf[(r - start) * 3 + k] = ((uint16_t)raw[r * 3 + k]) << 8;
+            }
+        }
     }
-		
-	return ret;
 }

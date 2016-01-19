@@ -100,12 +100,12 @@ int main(void)
     __bis_SR_register(GIE);
     __asm__("nop");
 
-    P2REN |= GPIO_PIN1;
-    P2OUT |= GPIO_PIN1;
+    P1DIR|= GPIO_PIN0;
 
     while(1){
-        if(P2IN & GPIO_PIN1){
+        if(P2IN & GPIO_PIN7){
             LedController::switchid();
+            P1OUT |= GPIO_PIN0;
         }
 //        if(MPU6050::DataReady){
 //            MPU6050::getMotion6(&ax, &ay, &az, &gx, &gy, &gz);

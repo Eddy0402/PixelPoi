@@ -30,6 +30,6 @@ extern "C"{
 }
 
 uint16_t getImg(uint8_t mode, uint8_t id, uint16_t time, uint8_t *buf);
-uint16_t getImgRange(uint8_t mode, uint8_t id, uint16_t time, uint16_t *buf, uint8_t start, uint8_t end);
+void getImgRange(uint8_t mode, uint8_t id, uint16_t time, uint16_t *buf, uint8_t start, uint8_t end);
 
 #endif

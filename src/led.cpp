@@ -60,7 +60,7 @@ void LedController::init()
     DMA_initParam dma0Param = {0};
     dma0Param.channelSelect = DMA_CHANNEL_0;
     dma0Param.transferModeSelect = DMA_TRANSFER_SINGLE;
-    dma0Param.transferSize = 97;
+    dma0Param.transferSize = 98;
     dma0Param.triggerSourceSelect = DMA_TRIGGERSOURCE_17;  // UCA0TXIFG
     dma0Param.transferUnitSelect = DMA_SIZE_SRCBYTE_DSTBYTE;
     dma0Param.triggerTypeSelect = DMA_TRIGGER_RISINGEDGE;
@@ -77,7 +77,7 @@ void LedController::init()
     DMA_initParam dma1Param = {0};
     dma1Param.channelSelect = DMA_CHANNEL_1;
     dma1Param.transferModeSelect = DMA_TRANSFER_SINGLE;
-    dma1Param.transferSize = 97;
+    dma1Param.transferSize = 98;
     dma1Param.triggerSourceSelect = DMA_TRIGGERSOURCE_21;  // UCA1TXIFG
     dma1Param.transferUnitSelect = DMA_SIZE_SRCBYTE_DSTBYTE;
     dma1Param.triggerTypeSelect = DMA_TRIGGER_RISINGEDGE;
@@ -94,6 +94,8 @@ void LedController::init()
     //const uint16_t factor = 64;
     const uint16_t period = 862;
     const uint16_t factor = 64;
+    //const uint16_t period = 16384;
+    //const uint16_t factor = 64;
     // Timer output mode set/reset for lat signal
     Timer_A_outputPWMParam ta1PwmParam;
     ta1PwmParam.clockSource = TIMER_A_CLOCKSOURCE_ACLK;
@@ -161,7 +163,7 @@ TLC5955 *LedController::getTLCModule(int n)
     }
 }
 
-uint8_t mode = 0;
+uint8_t mode = 3;
 uint8_t id = 0;
 uint8_t idcount = 1;
 
