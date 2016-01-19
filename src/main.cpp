@@ -86,6 +86,10 @@ void NMI_ISR(void)
 static int16_t ax = 32767, ay = 32767, az = 32767;
 static int16_t gx = 32767, gy = 32767, gz = 32767;
 
+uint8_t mode = 0;
+uint8_t id = 0;
+uint16_t time = 0;
+
 int main(void)
 {
     initUCS();
@@ -99,14 +103,30 @@ int main(void)
 
     __bis_SR_register(LPM0_bits + GIE);
 
-    uint16_t time = 0;
-
+    P1DIR = GPIO_PIN0;
     while(1){
 //        if(MPU6050::DataReady){
 //            MPU6050::getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
 //        }
+        P1OUT ^= GPIO_PIN0;
+        time++;
 
-        getImg(0, 0, time++, reinterpret_cast<uint8_t *>(LedController::getTLCModule(0)->getGSData()));
+        getImgRange(
+                    mode,
+                    id,
+                    time,
+                    reinterpret_cast<uint8_t *>(LedController::getTLCModule(0)->getGSData()),
+                    0,
+                    16
+                   );
+        getImgRange(
+                    mode,
+                    id,
+                    time,
+                    reinterpret_cast<uint8_t *>(LedController::getTLCModule(1)->getGSData()),
+                    17,
+                    32
+                   );
 
 
         __bis_SR_register(LPM0_bits + GIE);
