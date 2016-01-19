@@ -89,21 +89,25 @@ void LedController::init()
                       USCI_A_SPI_getTransmitBufferAddressForDMA(USCI_A1_BASE),
                       DMA_DIRECTION_UNCHANGED);
 
+    //const uint16_t period = 179;
+    //const uint16_t factor = 64;
+    const uint16_t period = 17900;
+    const uint16_t factor = 64;
     // Timer output mode set/reset for lat signal
     Timer_A_outputPWMParam ta1PwmParam;
     ta1PwmParam.clockSource = TIMER_A_CLOCKSOURCE_ACLK;
     ta1PwmParam.clockSourceDivider = TIMER_A_CLOCKSOURCE_DIVIDER_1;
-    ta1PwmParam.timerPeriod = 179;
+    ta1PwmParam.timerPeriod = period;
     ta1PwmParam.compareRegister = TIMER_A_CAPTURECOMPARE_REGISTER_1;
     ta1PwmParam.compareOutputMode = TIMER_A_OUTPUTMODE_SET_RESET;
-    ta1PwmParam.dutyCycle = 170;
+    ta1PwmParam.dutyCycle = period - period / factor;
     Timer_A_outputPWM(TIMER_A0_BASE, &ta1PwmParam);
 
     // Timer_A0 for data output
     Timer_A_initUpModeParam ta0Param = {0};
     ta0Param.clockSource = TIMER_A_CLOCKSOURCE_ACLK;
     ta0Param.clockSourceDivider = TIMER_A_CLOCKSOURCE_DIVIDER_1;
-    ta0Param.timerPeriod = 179;
+    ta0Param.timerPeriod = period;
     ta0Param.timerInterruptEnable_TAIE = TIMER_A_TAIE_INTERRUPT_ENABLE;
     ta0Param.startTimer = true;
     Timer_A_initUpMode(TIMER_A0_BASE, &ta0Param);
@@ -112,17 +116,18 @@ void LedController::init()
 void LedController::appSetup()
 {
     for(int chipid = 0; chipid < 2;++chipid){
-        chip[chipid].setAllLED(0, 65535);
-        chip[chipid].setAllLED(1, 65535);
-        chip[chipid].setAllLED(2, 65535);
-        chip[chipid].getControlData()->DSPRPT = 1;
+        chip[chipid].setAllLED(0, 500);
+        chip[chipid].setAllLED(1, 500);
+        chip[chipid].setAllLED(2, 500);
         chip[chipid].getControlData()->ESPWM = 1;
+        chip[chipid].getControlData()->RFRESH= 1;
+        chip[chipid].getControlData()->DSPRPT = 1;
         chip[chipid].getControlData()->BC_R = 0x1F;
         chip[chipid].getControlData()->BC_G = 0x1F;
         chip[chipid].getControlData()->BC_B = 0x1F;
-        chip[chipid].getControlData()->MC_R = 0x7;
-        chip[chipid].getControlData()->MC_G = 0x7;
-        chip[chipid].getControlData()->MC_B = 0x7;
+        chip[chipid].getControlData()->MC_R = 0x3;
+        chip[chipid].getControlData()->MC_G = 0x3;
+        chip[chipid].getControlData()->MC_B = 0x3;
         for (int i = 0; i < 21; ++i)
             chip[chipid].getControlData()->DOTCOR[i] = 0xFFFF;
     }
