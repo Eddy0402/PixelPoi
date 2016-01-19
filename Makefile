@@ -28,6 +28,12 @@ LFLAGS = -L $(SUPPORT_FILE_DIRECTORY) -T $(DEVICE).ld
 
 all: $(FIRMWARE)
 
+image/image.c: image/data.img
+	@echo "    GENCARR"$@
+	@echo "const unsigned char imagedata[] = {" > $@
+	@xxd -i < $< >> $@
+	@echo "};" >> $@
+
 $(OUTDIR)/%.o: %.s
 	@mkdir -p $(dir $@)
 	@echo " CC      "$@

@@ -25,4 +25,8 @@ static void __inline__ delay_ms(int ms){
     _delay_cycles(ms * UCS_getMCLK() / 1000 );
 }
 
+extern "C"{
+    extern const unsigned char imagedata[];
+}
+
 #endif

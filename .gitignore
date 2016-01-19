@@ -2,6 +2,7 @@ msp430f5529.hex
 msp430f5529.out
 build
 Log/*
+image/image.c
 
 *.o
 Firmware Output.txt
