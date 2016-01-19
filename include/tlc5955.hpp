@@ -35,7 +35,8 @@ public:
     void setDCData(uint8_t color, uint8_t channel, uint8_t dc);
 
     ControlData *getControlData() { return &this->controlData; }
-    uint16_t *getGSData() { return this->gsDataCommand; }
+    uint16_t *getGSData() { return this->gsData; }
+    uint16_t *getGSDataCommand() { return this->gsDataCommand; }
     enum Color : uint16_t { R, G, B };
 
 private:

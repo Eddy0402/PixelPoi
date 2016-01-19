@@ -163,11 +163,11 @@ __attribute__((__interrupt__(TIMER0_A1_VECTOR))) void TA0CCR_TA0IFG_ISR(void)
                 if (writeControl == 2) {
                     DMA_setSrcAddress(
                         DMA_CHANNEL_0,
-                        (uint32_t)LedController::chip[0].getGSData(),
+                        (uint32_t)LedController::chip[0].getGSDataCommand(),
                         DMA_DIRECTION_INCREMENT);
                     DMA_setSrcAddress(
                         DMA_CHANNEL_1,
-                        (uint32_t)LedController::chip[1].getGSData(),
+                        (uint32_t)LedController::chip[1].getGSDataCommand(),
                         DMA_DIRECTION_INCREMENT);
                 } else {
                     ++writeControl;
