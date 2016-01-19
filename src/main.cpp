@@ -22,6 +22,7 @@
 #include "driverlib.h"
 #include "led.hpp"
 #include "mpu6050.hpp"
+#include "misc.hpp"
 
 static void __attribute__((naked, section(".crt_0042"), used))
 disable_watchdog(void)
@@ -97,13 +98,16 @@ int main(void)
     LedController::start();
 
     __bis_SR_register(LPM0_bits + GIE);
+
+    uint16_t time = 0;
+
     while(1){
 //        if(MPU6050::DataReady){
 //            MPU6050::getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
 //        }
-//        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&ax + 32767));
-//        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&ay) + 32767);
-//        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&az) + 32767);
+
+        getImg(0, 0, time++, reinterpret_cast<uint8_t *>(LedController::getTLCModule(0)->getGSData()));
+
 
         __bis_SR_register(LPM0_bits + GIE);
     }

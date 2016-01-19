@@ -161,13 +161,6 @@ __attribute__((__interrupt__(TIMER0_A1_VECTOR))) void TA0CCR_TA0IFG_ISR(void)
         case 0x0E:  // TA0CTL TAIFG
             if (::start) {
                 if (writeControl == 2) {
-                    LedController::chip[0].setAllLED(0, LedController::globalLight);
-                    LedController::chip[0].setAllLED(1, LedController::globalLight);
-                    LedController::chip[0].setAllLED(2, LedController::globalLight);
-                    LedController::chip[1].setAllLED(0, LedController::globalLight);
-                    LedController::chip[1].setAllLED(1, LedController::globalLight);
-                    LedController::chip[1].setAllLED(2, LedController::globalLight);
-
                     DMA_setSrcAddress(
                         DMA_CHANNEL_0,
                         (uint32_t)LedController::chip[0].getGSData(),
@@ -176,8 +169,6 @@ __attribute__((__interrupt__(TIMER0_A1_VECTOR))) void TA0CCR_TA0IFG_ISR(void)
                         DMA_CHANNEL_1,
                         (uint32_t)LedController::chip[1].getGSData(),
                         DMA_DIRECTION_INCREMENT);
-
-                    LedController::globalLight += 0x0100;
                 } else {
                     ++writeControl;
                 }

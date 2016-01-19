@@ -3,7 +3,7 @@
 
 #include "driverlib.h"
 
-void _delay_cycles(register uint16_t delayCycles) {
+static void __inline__ _delay_cycles(register uint16_t delayCycles) {
     __asm__ (
              "    sub   #20, %[delayCycles]\n"
              "1:  sub   #4, %[delayCycles] \n"
@@ -28,5 +28,7 @@ static void __inline__ delay_ms(int ms){
 extern "C"{
     extern const unsigned char imagedata[];
 }
+
+uint16_t getImg(uint8_t mode, uint8_t id, uint16_t time, uint8_t *buf);
 
 #endif
