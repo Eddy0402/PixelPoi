@@ -82,6 +82,9 @@ void NMI_ISR(void)
     while(status != 0);
 }
 
+static int16_t ax = 32767, ay = 32767, az = 32767;
+static int16_t gx = 32767, gy = 32767, gz = 32767;
+
 int main(void)
 {
     initUCS();
@@ -95,12 +98,12 @@ int main(void)
 
     __bis_SR_register(LPM0_bits + GIE);
     while(1){
-        static int16_t ax, ay, az;
-        static int16_t gx, gy, gz;
-        MPU6050::getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
-        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&ax));
-        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&ay));
-        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&az));
+//        if(MPU6050::DataReady){
+//            MPU6050::getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+//        }
+//        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&ax + 32767));
+//        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&ay) + 32767);
+//        LedController::getTLCModule(0)->setAllLED(0, *((uint16_t *)&az) + 32767);
 
         __bis_SR_register(LPM0_bits + GIE);
     }

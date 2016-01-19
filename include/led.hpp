@@ -13,7 +13,7 @@ namespace LedController{
     TLC5955 *getTLCModule(int n);
 
     extern uint16_t globalLight;
-    extern TLC5955 chip0;
+    extern TLC5955 chip[];
 }
 
 #endif

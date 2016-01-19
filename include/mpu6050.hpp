@@ -11,6 +11,7 @@ namespace MPU6050{
     void setFullScaleGyroRange(uint8_t range);
     uint8_t setFullScaleAccelRange(uint8_t range);
     void setSleepEnabled(uint8_t enabled);
+    bool DataReady();
 
     void hwInit();
     void initializeIMU();

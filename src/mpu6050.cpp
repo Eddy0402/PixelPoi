@@ -15,9 +15,16 @@ static void readByte(uint8_t regAddr, uint8_t* b);
 static void readBytes(uint8_t regAddr,
                       uint8_t length,
                       uint8_t* data);
+void writeBit(uint8_t regAddr, uint8_t bitNum, uint8_t data);
+
+bool MPU6050::DataReady(){
+    return P7IN | GPIO_PIN0;
+}
 
 void MPU6050::hwInit()
 {
+    P7DIR &= ~GPIO_PIN0;
+
     P4SEL |= GPIO_PIN1 | GPIO_PIN2;
     P4REN |= GPIO_PIN1 | GPIO_PIN2;
     P4OUT |= GPIO_PIN1 | GPIO_PIN2;
@@ -51,6 +58,7 @@ void MPU6050::initializeIMU()
     // Wake up device.
     setSleepEnabled(0);
     delay_ms(10);
+    writeBit(MPU6050_RA_INT_ENABLE, MPU6050_INTERRUPT_DATA_RDY_BIT, 1);
 }
 
 uint8_t MPU6050::getDeviceID()
